@@ -9,7 +9,7 @@ plotFunction(x => Math.sin(x), 0, 4 * Math.PI, "red");
 plotFunction(x => Math.cos(x), 0, 4 * Math.PI, "blue");
 
 // draw some labels
-drawLabel("sin", 130, 50, "red");
+drawLabel("sin", 150, 50, "red");
 drawLabel("cos", 80, 170, "blue");
 
 
@@ -86,7 +86,7 @@ function drawXAxis(yMin, yMax) {
     let y = transform(0, yMin, yMax, canvas.height - 1, 0);
 
     y = clamp(y, 0, canvas.height - 1);
-    line(0, y, canvas.width - 1, y, "gray");
+    line(0, y, canvas.width - 1, y, "black");
 }
 
 
@@ -95,7 +95,7 @@ function drawYAxis(xMin, xMax) {
     let x = transform(0, xMin, xMax, 0, canvas.width - 1);
 
     x = clamp(x, 0, canvas.width - 1);
-    line(x, 0, x, canvas.height - 1, "gray");
+    line(x, 0, x, canvas.height - 1, "black", 2);
 }
 
 
